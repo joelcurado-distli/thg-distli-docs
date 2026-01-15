@@ -1,20 +1,16 @@
 // tag::architect[]
 = Requirements Overview
 
-////
-[NOTE]
-====
-This section outlines high-level technical requirements. Each entry represents a key capability of the system. Update this section as new high-level requirements emerge or existing ones change significantly.
-Most of these requirements will probably be from an ADR so there is an example on how to include one with proper formatting
-====
-////
 
 [cols="1,8", id=requirements, options="header"]
 |===
-|ID | Requirement
-|[[RE1]]R1 | The system shall use Web3 Auth for authentication
-|[[RE2]]R2 | Hedera Smart Contract Service will be used for smart-contract deployments
-|[[RE3]]R3 a|
+|ID | Requirements
+|R1 | Byzantine fault tolerant consensus (3/5 operator approval)
+|R2 | Real-time fraud detection with <100ms response time
+|R3 | Privacy-preserving settlements using Groth16 ZKP
+|R4 | Behavioral ML with 70% false positive reduction
+|R5 | Cross-consortium threat intelligence sharing
+
 include::../04_architecture_decisions/adr-001-my-project.adoc[]
 |===
 

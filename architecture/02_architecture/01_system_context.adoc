@@ -3,9 +3,7 @@
 == Overview
 
 [NOTE]
-This diagram shows the systems that are communicating and interacting within the scope of the Managed Transaction Gateway.
-The example below gives a view on the different types of components
-
+5-party consortium with external integrations to HSS systems, public Hedera ledger, and operator APIs
 == Context Diagram
 // tag::architect[]
 [plantuml, format=png]

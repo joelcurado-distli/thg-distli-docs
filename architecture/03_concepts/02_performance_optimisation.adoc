@@ -3,7 +3,8 @@
 [NOTE]
 ====
 Add any performance enhancing design decisions. Here are a few examples
-- Caching layer implemented using Redis for frequently accessed data
-- Database query optimization and indexing
+- Kafka for RT ingestion
+- Real-time fraud detection
+- settlement batching
 - Asynchronous processing for non-critical operations
 ====

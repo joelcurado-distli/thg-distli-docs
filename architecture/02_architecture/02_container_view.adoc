@@ -2,8 +2,13 @@
 
 == Overview
 [NOTE]
-====
-This diagram shows the single container images and their interactions as they are used by the System under Development.
+
+ - Rust blockchain nodes per operator
+  - Python ML fraud detection service
+  - MariaDB telecom event storage
+  - Dashboard web interface
+  - Docker orchestration
+
 ====
 // tag::developer[]
 == Container Diagram

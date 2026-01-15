@@ -1,0 +1,109 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36" version="29.3.1">
+  <diagram name="Container Architecture" id="container-architecture">
+    <mxGraphModel dx="786" dy="574" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;fontSize=18;fontStyle=1;align=center;" value="SP Blockchain Container Architecture" vertex="1">
+          <mxGeometry height="30" width="400" x="500" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sp_admin" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" value="SP Admin&#xa;[Person]" vertex="1">
+          <mxGeometry height="60" width="120" x="10" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="fraud_analyst" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" value="Fraud Analyst&#xa;[Person]" vertex="1">
+          <mxGeometry height="60" width="120" x="10" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="platform_boundary" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=2;dashed=1;fontSize=14;fontStyle=1;verticalAlign=top;align=left;" value="SP Blockchain Platform" vertex="1">
+          <mxGeometry height="490" width="700" x="160" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="web_dashboard" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" value="Web Dashboard&#xa;[Container: HTML/CSS/JS]&#xa;&#xa;Interactive fraud monitoring and settlement management UI" vertex="1">
+          <mxGeometry height="80" width="160" x="250" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="api_gateway" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" value="API Gateway&#xa;[Container: Rust Axum]&#xa;&#xa;REST API endpoints with authentication and rate limiting" vertex="1">
+          <mxGeometry height="80" width="160" x="540" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="blockchain_core" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" value="Blockchain Core&#xa;[Container: Rust]&#xa;&#xa;Core blockchain logic, consensus, and settlement processing" vertex="1">
+          <mxGeometry height="80" width="160" x="230" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="fraud_engine" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" value="Fraud Prevention Engine&#xa;[Container: Rust]&#xa;&#xa;Real-time fraud detection and risk assessment" vertex="1">
+          <mxGeometry height="80" width="160" x="440" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="ml_client" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" value="ML Integration Client&#xa;[Container: Rust]&#xa;&#xa;HTTP client for behavioral ML service integration" vertex="1">
+          <mxGeometry height="80" width="160" x="690" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="zkp_engine" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" value="ZKP Engine&lt;br&gt;[Container: Rust + arkworks]&lt;br&gt;&lt;br&gt;ZK proof generation and verification" vertex="1">
+          <mxGeometry height="80" width="160" x="170" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="p2p_network" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" value="P2P Network&#xa;[Container: Rust libp2p]&#xa;&#xa;Inter-SP node communication and consensus" vertex="1">
+          <mxGeometry height="80" width="160" x="450" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="storage_layer" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" value="Storage Layer&#xa;[Container: RocksDB]&#xa;&#xa;Blockchain data, fraud alerts, and smart contract state" vertex="1">
+          <mxGeometry height="80" width="160" x="640" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="ml_boundary" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=2;dashed=1;fontSize=14;fontStyle=1;verticalAlign=top;align=left;" value="ML Fraud Platform" vertex="1">
+          <mxGeometry height="290" width="480" x="880" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="behavioral_engine" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1" value="Behavioral Baseline Engine&#xa;[Container: Python]&#xa;&#xa;Per-subscriber behavioral pattern learning and anomaly detection" vertex="1">
+          <mxGeometry height="80" width="180" x="930" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="xgboost_fallback" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1" value="XGBoost Fallback&#xa;[Container: Python]&#xa;&#xa;Traditional ML model for edge cases" vertex="1">
+          <mxGeometry height="80" width="180" x="1170" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="realtime_detector" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1" value="Real-time Detector&#xa;[Container: Python]&#xa;&#xa;Live behavioral anomaly detection service" vertex="1">
+          <mxGeometry height="80" width="180" x="920" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="telco_db" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1" value="Telco Event Database&#xa;[Database: MariaDB]&#xa;&#xa;MME events, CDR records, app events, cell tower data" vertex="1">
+          <mxGeometry height="100" width="180" x="1130" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="hedera_net" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1" value="Hedera Network&#xa;[External Database: Public DLT]&#xa;&#xa;Settlement hash commits and audit trails" vertex="1">
+          <mxGeometry height="150" width="200" x="330" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="rel1" edge="1" parent="1" source="sp_admin" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="web_dashboard" value="Manages system [HTTPS]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel2" edge="1" parent="1" source="fraud_analyst" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.8;" target="web_dashboard" value="Monitors alerts [HTTPS]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel3" edge="1" parent="1" source="web_dashboard" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="api_gateway" value="API calls [REST]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel4" edge="1" parent="1" source="api_gateway" style="endArrow=classic;html=1;exitX=0.2;exitY=1;entryX=0.8;entryY=0;" target="blockchain_core" value="Settlement operations">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel5" edge="1" parent="1" source="api_gateway" style="endArrow=classic;html=1;exitX=0.8;exitY=1;entryX=0.2;entryY=0;" target="fraud_engine" value="Fraud assessments">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel6" edge="1" parent="1" source="fraud_engine" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="ml_client" value="Risk scoring [HTTP]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel7" edge="1" parent="1" source="ml_client" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="behavioral_engine" value="Behavioral analysis [HTTP API]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel8" edge="1" parent="1" source="behavioral_engine" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="xgboost_fallback" value="Fallback scoring">
+          <mxGeometry relative="1" y="50" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel9" edge="1" parent="1" source="behavioral_engine" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="telco_db" value="Event queries [SQL]">
+          <mxGeometry relative="1" x="0.7775" y="26" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel10" edge="1" parent="1" source="blockchain_core" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="zkp_engine" value="Proof generation">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel11" edge="1" parent="1" source="blockchain_core" style="endArrow=classic;html=1;exitX=1;exitY=1;entryX=0;entryY=0;" target="p2p_network" value="Consensus messages [libp2p]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel12" edge="1" parent="1" source="blockchain_core" style="endArrow=classic;html=1;exitX=1;exitY=1;entryX=0;entryY=0;" target="storage_layer" value="Data persistence [RocksDB API]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel13" edge="1" parent="1" source="blockchain_core" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="hedera_net" value="Hash commits [HBAR API]">
+          <mxGeometry relative="1" x="0.3019" y="-7" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

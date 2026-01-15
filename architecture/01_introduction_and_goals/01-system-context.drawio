@@ -1,0 +1,62 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36" version="29.3.1">
+  <diagram name="System Context" id="system-context">
+    <mxGraphModel dx="1955" dy="574" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;fontSize=18;fontStyle=1;align=center;" value="SP Blockchain System Context (v2.6.0)" vertex="1">
+          <mxGeometry height="30" width="400" x="400" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sp_admin" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" value="SP Administrator&#xa;[Person]&#xa;&#xa;Telecom operator admin managing settlement and fraud prevention" vertex="1">
+          <mxGeometry height="100" width="150" x="120" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="sp_analyst" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" value="Fraud Analyst&#xa;[Person]&#xa;&#xa;Security analyst monitoring fraud alerts and threat intelligence" vertex="1">
+          <mxGeometry height="100" width="150" x="-10" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="customer" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" value="Mobile Subscriber&#xa;[Person]&#xa;&#xa;End user whose activities generate BCE records" vertex="1">
+          <mxGeometry height="100" width="150" x="80" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="sp_blockchain" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=12" value="SP Blockchain Platform&#xa;[Software System]&#xa;&#xa;Consortium blockchain for telecom settlement and fraud prevention with behavioral ML" vertex="1">
+          <mxGeometry height="120" width="200" x="410" y="294" as="geometry" />
+        </mxCell>
+        <mxCell id="hedera" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1" value="Hedera Consensus&#xa;[External System]&#xa;&#xa;Public ledger for settlement finality and audit trails" vertex="1">
+          <mxGeometry height="100" width="150" x="640" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="ml_service" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1" value="ML Fraud Service&#xa;[External System]&#xa;&#xa;External Python ML service for behavioral analysis" vertex="1">
+          <mxGeometry height="100" width="150" x="870" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="mariadb" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1" value="MariaDB Cluster&#xa;[External System]&#xa;&#xa;Telco event data storage (MME, CDR, App events)" vertex="1">
+          <mxGeometry height="100" width="150" x="750" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="external_sp" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1" value="Partner SP Nodes&#xa;[External System]&#xa;&#xa;Other telecom operator blockchain nodes" vertex="1">
+          <mxGeometry height="100" width="150" x="500" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="rel1" edge="1" parent="1" source="sp_admin" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.3;" target="sp_blockchain" value="Manages settlements, contracts, alerts&#xa;[REST API / Dashboard]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel2" edge="1" parent="1" source="sp_analyst" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="sp_blockchain" value="Monitors fraud alerts, threat intelligence&#xa;[Dashboard UI]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel3" edge="1" parent="1" source="customer" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.8;" target="sp_blockchain" value="Activities generate BCE records&#xa;[via SP networks]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel4" edge="1" parent="1" source="sp_blockchain" style="endArrow=classic;html=1;exitX=1;exitY=0.3;entryX=0;entryY=0.5;" target="hedera" value="Commits settlement hashes&#xa;[HBAR payments]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel5" edge="1" parent="1" source="sp_blockchain" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="ml_service" value="Behavioral fraud detection&#xa;[HTTP API]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel6" edge="1" parent="1" source="sp_blockchain" style="endArrow=classic;html=1;entryX=0;entryY=0.5;exitX=1.02;exitY=0.85;exitDx=0;exitDy=0;exitPerimeter=0;" target="mariadb" value="Reads telecom events&#xa;[SQL queries]">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="620" y="390" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel7" edge="1" parent="1" style="endArrow=classic;html=1;entryX=0.25;entryY=0;startArrow=classic;startFill=1;entryDx=0;entryDy=0;" target="external_sp" value="P2P consensus, settlement sync&#xa;[libp2p]">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="510" y="420" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

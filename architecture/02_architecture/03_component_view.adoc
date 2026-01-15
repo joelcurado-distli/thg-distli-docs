@@ -6,7 +6,12 @@ This document provides a component-level view (C3) of the Project, detailing the
 
 == [[components]] Component Diagram - Frontend
 
-The purpose of the Application Admin FE is to manage the currently logged-in users data, subscriptions and API keys while the Dashboard Service FE allows the THA Admin the management of all users and provide him with an overview of the platforms usage.
+ - Behavioral Baseline Engine (787 lines)
+  - Byzantine Consensus Framework
+  - ZKP Settlement System
+  - XGBoost ML Fallback
+  - P2P Network (libp2p)
+
 
 [plantuml, format=png]
 ----
