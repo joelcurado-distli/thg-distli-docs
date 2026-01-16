@@ -6,7 +6,7 @@
 
 |CEO |Joel Curado|Leadership and Management. Sales and Business Development
 |CTO |Zeljko Susjnar |Technical Architecture, feasibility and performance
-|Product Owner |Sean Gordon |Feature completeness and user satisfaction
+|Head of Product |Sean Gordon |Feature completeness and user satisfaction
 |CSO |Nim Siriwardana |Strategy and Engineering Architecture
 
 |===
